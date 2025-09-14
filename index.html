@@ -1,0 +1,47 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Waste Segregation Monitoring System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Waste Segregation Monitoring System</h1>
+  </header>
+
+  <div class="container">
+    <h2>Submit Your Waste Segregation</h2>
+    <form id="wasteForm">
+      <label for="wasteType">Select Waste Type:</label>
+      <select id="wasteType" required>
+        <option value="">-- Select --</option>
+        <option value="Biodegradable">Biodegradable</option>
+        <option value="Recyclable">Recyclable</option>
+        <option value="Hazardous">Hazardous</option>
+        <option value="Mixed">Mixed Waste</option>
+      </select>
+      <button type="submit">Submit</button>
+    </form>
+
+    <div id="feedback" class="feedback" style="display: none;"></div>
+
+    <div class="dashboard">
+      <h2>Authority Dashboard</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Submission #</th>
+            <th>Waste Type</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody id="dashboardTable"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
